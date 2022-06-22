@@ -1,0 +1,5 @@
+train: dataset/images/train
+val: dataset/images/valid
+
+nc: 2
+names: ['DLLogo', 'DLSignature']
