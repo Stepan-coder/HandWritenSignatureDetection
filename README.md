@@ -16,7 +16,7 @@ YOLO uses convolutional neural networks instead of the region-based methods empl
 
 YOLO devices an image into nine regions and predicts whether a target class is present in each region or not. It also predicts the bounding box coordinates of the target class. Non-max suppression is used to prevent same object being detected multiple times.
 
-![YOLO_WORKING](Images/yolo_working.png)
+![YOLO_WORKING](Images/yolo_working.jpeg)
 
 The original YOLO paper could be accessed [here](https://arxiv.org/abs/1506.02640) and YOLOv5 repo could be found [here](https://github.com/ultralytics/yolov5).
 
