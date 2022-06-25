@@ -83,7 +83,7 @@ signature_detector = YoloSignatureDetector(path_to_model='*path to model*.pt')
 # predicted = signature_detector.predict(images=cv2.imread("001.png")])  # Single image prediction
 predicted = signature_detector.predict(images=[cv2.imread("001.png"), cv2.imread("002.png"), cv2.imread("003.png")])  # Multi image preditcion
 ```
-To find captions on an image (images), pass `images=*your image*` or `images=[*your images*]` as an argument. The result of the method will be `List[List[YoloObjectClass]]'. YoloObjectClass contains the following properties:
+To find captions on an image (images), pass `images=*your image*` or `images=[*your images*]` as an argument. The result of the method will be `List[List[YoloObjectClass]]`. YoloObjectClass contains the following properties:
 * `name` - Name of the class label
 * `confidence` - The **confidence** of the model in a particular answer
 * `class_id` - Id of the **class** the model is leaning towards
