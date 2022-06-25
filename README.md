@@ -37,6 +37,25 @@ In machine learning , the process of creating a model is usually divided into th
 
 ### [Data preparation](Step_1_Convertiong_Dataset_to_YOLOv5)
 ### [Model](Step_2_Custom_YOLO_training)
+### Training the model
+Use [this notebook](Step_2_Custom_YOLO_training\CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
+  
+Clone the official [YOLOv5 repo] and install the requirements using the `requirements.txt` file.  
+We need to create a `tobacco_data.yaml` and add the path of training `train:` and validation `valid:` directories, number of classes `nc:` and class names `['DLLogo', 'DLSignature']` and add this file to the `yolov5` directory we cloned.  
+
+Now, we have to select a pre-trained model from the available pre-trained checkpoints. These `model.yaml` files are present inside `yolov5\models`. I have used `yolov5x` for performing my experiments.  
+![Yolo models](../../Images/yolo_model_list.png)  
+  
+**Training arguments**  
+`--img 640` is the width of the images.  
+`--batch` - batch size>  
+`--epochs` - no of epochs  
+`--data` - Dataset.yaml (`tobacco_data.yaml`) path  
+`--cfg models/model.yaml` is used to set the model we want to train on. I have used yolov5x.yaml, more information could be found [here.](https://github.com/ultralytics/yolov5#pretrained-checkpoints)  
+  
+**To Train the model**, run the following line.  
+> **!python yolov5/train.py --img 640 --batch 16 --epochs 300 --data tobacco_data.yaml --cfg models/yolov5x.yaml --name Tobacco-run**
+
 ### [Deployment](Step_3_Usage)
 
 
