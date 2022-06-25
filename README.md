@@ -84,12 +84,12 @@ signature_detector = YoloSignatureDetector(path_to_model='*path to model*.pt')
 predicted = signature_detector.predict(images=[cv2.imread("001.png"), cv2.imread("002.png"), cv2.imread("003.png")])  # Multi image preditcion
 ```
 To find captions on an image (images), pass `images=*your image*` or `images=[*your images*]` as an argument. The result of the method will be `List[List[YoloObjectClass]]'. YoloObjectClass contains the following properties:
-* `name` -
-* `confidence` -
-* `class_id` -
-* `scaling` -
-* `x_min` -
-* `y_min` - 
-* `x_max` - 
-* `y_max` - 
+* `name` - Name of the class label
+* `confidence` - The **confidence** of the model in a particular answer
+* `class_id` - Id of the **class** the model is leaning towards
+* `scaling` - The **scaling factor** of the original image to the images that YOLOv5x works with [640 x 480]
+* `x_min` - The **left border** of the frame around the signature
+* `y_min` - The **top border** of the frame around the signature
+* `x_max` - The **right border** of the frame around the signature
+* `y_max` - The **bottom border** of the frame around the signature
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
