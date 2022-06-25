@@ -92,4 +92,5 @@ To find captions on an image (images), pass `images=*your image*` or `images=[*y
 * `y_min` - The **top border** of the frame around the signature
 * `x_max` - The **right border** of the frame around the signature
 * `y_max` - The **bottom border** of the frame around the signature
+
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
