@@ -76,8 +76,9 @@ from signature_detector import *
 
 
 image = cv2.imread("001.png")
-signature_detector = YoloSignatureDetector(path_to_model='model.pt')
-res = signature_detector.predict(images=[image])
+signature_detector = YoloSignatureDetector(path_to_model='*path to model*.pt')
+# predicted = signature_detector.predict(images=cv2.imread("001.png")])  # Single image prediction
+predicted = signature_detector.predict(images=[cv2.imread("001.png"), cv2.imread("002.png"), cv2.imread("003.png")])  # Multi image preditcion
 ```
 
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
