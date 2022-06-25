@@ -71,6 +71,8 @@ We need to create a `tobacco_data.yaml` and add the path of training `train:` an
 
 ### [Deployment](Step_3_Usage)
 
+To use it, you need to install all the libraries from the `requirements.txt` file, as well as move the `signature_detector` folder to the `root` of your project. An example of a simple use can be seen below:
+
 ```Python3
 from signature_detector import *
 
