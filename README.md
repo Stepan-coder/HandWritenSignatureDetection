@@ -47,13 +47,13 @@ We need to create a `tobacco_data.yaml` and add the path of training `train:` an
 `--img 640` is the width of the images.  
 `--batch` - batch size
 `--epochs` - no of epochs  
-`--data` - Dataset.yaml (`tobacco_data.yaml`) path  
+`--data` - Your path to `tobacco_data.yaml`  
 `--cfg models/model.yaml` is used to set the model we want to train on. I have used yolov5x.yaml, more information could be found [here.](https://github.com/ultralytics/yolov5#pretrained-checkpoints)  
-  
-**To Train the model**, run the following line.  
+`--name` - The folder where the weights of the model will be saved
+
+**To Train the model, run the following line.**  
 > **!python yolov5/train.py --img 640 --batch 16 --epochs 300 --data tobacco_data.yaml --cfg models/yolov5x.yaml --name Tobacco-run**
 
-### Run Inference
 **Testing/ Inference arguments**  
 `--hide-labels` is used to hide the labels in the detected images.  
 `--hide-conf` is used to hide the confidence scores in the detected images.  
@@ -63,10 +63,10 @@ We need to create a `tobacco_data.yaml` and add the path of training `train:` an
 `--project` could be used to specify the results path  
   
 **To test/run inference on a directory of images.**  
-> **!python yolov5/detect.py --source tobacco_yolo_format/images/valid/ --weights 'runs/train/Tobacco-run/weights/best.pt' --hide-labels --hide-conf --classes 1 --line-thickness 2**
+> **!python yolov5/detect.py --source /images/valid/ --weights 'runs/train/Tobacco-run/weights/model.pt' --hide-labels --hide-conf --classes 1 --line-thickness 2**
 
 **To pedict a single image**  
-> **!python yolov5/detect.py --source tobacco_yolo_format/images/valid/imagename --weights 'runs/train/Tobacco-run/weights/best.pt' --hide-labels --hide-conf --classes 1 --line-thickness 2**  
+> **!python yolov5/detect.py --source /images/valid/imagename --weights 'runs/train/Tobacco-run/weights/model.pt' --hide-labels --hide-conf --classes 1 --line-thickness 2**  
    
 
 ### [Deployment](Step_3_Usage)
