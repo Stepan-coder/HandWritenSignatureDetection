@@ -23,7 +23,7 @@ The original YOLO paper could be accessed [here](https://arxiv.org/abs/1506.0264
 ## Workflow
 
 In machine learning , the process of creating a model is usually divided into the following steps:
-* [Data preparation](Step_1_Convertiong Dataset_to_YOLOv5)
+* [Data preparation](Step_1_Convertiong_Dataset_to_YOLOv5)
   * Data collection / Dataset search
   * Clearing data
   * Data preparation / Data markup
