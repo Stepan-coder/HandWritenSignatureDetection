@@ -24,10 +24,10 @@ The original YOLO paper could be accessed [here](https://arxiv.org/abs/1506.0264
 
 In machine learning , the process of creating a model is usually divided into the following steps:
 + Preparation
-++ Data collection / dataset search
-++ Clearing data
-++ Data preparation / Data markup
-++ Splitting the available data into training, validation and test samples
+ ++ Data collection / dataset search
+ ++ Clearing data
+ ++ Data preparation / Data markup
+ ++ Splitting the available data into training, validation and test samples
 + Training
 ++
 
