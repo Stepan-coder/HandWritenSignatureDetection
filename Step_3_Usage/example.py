@@ -1,6 +1,6 @@
 import os
 import cv2
-from YOLOv5_signature_detector import *
+from signature_detector import *
 
 
 image = cv2.imread("001.png")
@@ -14,7 +14,7 @@ for im in res:
                               (255, 0, 0),
                               2)
 
-cv2.imshow("some", image)
+cv2.imshow("Window", image)
 cv2.waitKey()
 
 

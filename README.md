@@ -71,5 +71,13 @@ We need to create a `tobacco_data.yaml` and add the path of training `train:` an
 
 ### [Deployment](Step_3_Usage)
 
+```Python3
+from signature_detector import *
+
+
+image = cv2.imread("001.png")
+signature_detector = YoloSignatureDetector(path_to_model='model.pt')
+res = signature_detector.predict(images=[image])
+```
 
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  

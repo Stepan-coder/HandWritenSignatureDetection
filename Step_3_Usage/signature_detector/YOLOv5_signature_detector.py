@@ -4,7 +4,7 @@ import torch
 import numpy as np
 from PIL import Image
 from typing import Dict, List, Any
-from SIG.YOLOv5_signature_object import *
+from signature_detector.YOLOv5_signature_object import *
 
 
 class YoloSignatureDetector:
