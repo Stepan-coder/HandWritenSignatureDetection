@@ -38,7 +38,7 @@ In machine learning , the process of creating a model is usually divided into th
 ### [Data preparation](Step_1_Convertiong_Dataset_to_YOLOv5)
 ### [Model](Step_2_Custom_YOLO_training)
 ### Training the model
-Use [this notebook](Step_2_Custom_YOLO_training\CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
+Use [this notebook](Step_2_Custom_YOLO_training/CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
   
 Clone the official [YOLOv5 repo] and install the requirements using the `requirements.txt` file.  
 We need to create a `tobacco_data.yaml` and add the path of training `train:` and validation `valid:` directories, number of classes `nc:` and class names `['DLLogo', 'DLSignature']` and add this file to the `yolov5` directory we cloned.  
