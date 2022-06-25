@@ -36,5 +36,8 @@ In machine learning , the process of creating a model is usually divided into th
   * Preparing the model for further use
 
 ### [Data preparation](Step_1_Convertiong_Dataset_to_YOLOv5)
+### [Model](Step_2_Custom_YOLO_training)
+### [Deployment](Step_3_Usage)
+
 
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
