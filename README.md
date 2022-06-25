@@ -22,4 +22,14 @@ The original YOLO paper could be accessed [here](https://arxiv.org/abs/1506.0264
 
 ## Workflow
 
+In machine learning , the process of creating a model is usually divided into the following steps:
++ Preparation
+++ Data collection / dataset search
+++ Clearing data
+++ Data preparation / Data markup
+++ Splitting the available data into training, validation and test samples
++ Training
+++
+
+
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
