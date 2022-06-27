@@ -103,7 +103,7 @@ from signature_detector import *
 picture = cv2.imread("001.png")
 signature_detector = YoloSignatureDetector(path_to_model='*path to model*.pt')
 predicted = signature_detector.predict(images=[picture])
-for image in predicted:  #  predicted - a list of lists, where the external list is the images, and the internal list is the signatures found on the pictures.
+for image in predicted:  # predicted - a list of lists, where the external list is the images, and the internal list is the signatures found on the pictures.
     for signature in image:
         picture = cv2.rectangle(picture,
                                 (int(signature.x_min), int(signature.y_min)),
