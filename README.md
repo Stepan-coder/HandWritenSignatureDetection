@@ -93,4 +93,25 @@ To find captions on an image (images), pass `images=*your image*` or `images=[*y
 * `x_max` - The **right border** of the frame around the signature
 * `y_max` - The **bottom border** of the frame around the signature
 
+An example of the simplest Python code for highlighting areas where, according to YOLOv5x, signatures may be located.
+
+```Python3
+import cv2
+from signature_detector import *
+
+
+picture = cv2.imread("001.png")
+signature_detector = YoloSignatureDetector(path_to_model='*path to model*.pt')
+predicted = signature_detector.predict(images=[picture])
+for image in predicted:  #  predicted - a list of lists, where the external list is the images, and the internal list is the signatures found on the pictures.
+    for signature in image:
+        picture = cv2.rectangle(picture,
+                                (int(signature.x_min), int(signature.y_min)),
+                                (int(signature.x_max), int(signature.y_max)),
+                                (255, 0, 0),
+                                2)
+
+cv2.imshow("Window", picture)
+cv2.waitKey()
+```
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
