@@ -45,7 +45,7 @@ We need to create a `tobacco_data.yaml` and add the path of training `train:` an
  
 **Training arguments**  
 `--img 640` is the width of the images.  
-`--batch` - batch size 
+`--batch` - batch size   
 `--epochs` - no of epochs  
 `--data` - Your path to `tobacco_data.yaml`  
 `--cfg models/model.yaml` is used to set the model we want to train on. I have used yolov5x.yaml, more information could be found [here.](https://github.com/ultralytics/yolov5#pretrained-checkpoints)  
