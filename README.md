@@ -41,6 +41,10 @@ To implement the module and to train the model, a sufficiently large set of trai
 
 Soon luck smiled on me and I came across [this](https://tc11.cvc.uab.es/datasets/Tobacco800_1) dataset. It was almost perfect for my task, I needed to carry out some actions and you can start learning.
 
+Initially , the data in the presented dataset has the format `.tif` (I have some questions to the creators of the dataset why this particular format was chosen, but I am extremely grateful to them for presenting the data), so it was necessary to translate all files from `.tif` to `.jpeg`.
+
+The next step in data preparation was the creation of a file by which YOLO will understand which image it is working with and where exactly the signature is (or not) on the image. To do this, it was necessary to process all the attached data `.xlm` files, to which this information is specified and create new files (for training and test samples). Along with this, converting the input images to the `640x480` pixels standard, the size of the input image to YOLOv5x **(for other models of the YOLO series, the size of the input image will be different)**.
+
 ### [Training the model](Step_2_Custom_YOLO_training)
 
 Use [this notebook](Step_2_Custom_YOLO_training/CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
