@@ -51,7 +51,16 @@ Use [this notebook](Step_2_Custom_YOLO_training/CustomYOLOv5_using_Tobcco800_dat
   
 Clone the official [YOLOv5 repo](https://github.com/ultralytics/yolov5) and install the requirements using the `requirements.txt` file.  
 We need to create a `tobacco_data.yaml` and add the path of training `train:` and validation `valid:` directories, number of classes `nc:` and class names `['DLLogo', 'DLSignature']` and add this file to the `yolov5` directory we cloned.  
- 
+
+**Example `.yml` file for the model configuration.**
+```Python3
+train: dataset/images/train
+val: dataset/images/valid
+
+nc: 2
+names: ['DLLogo', 'DLSignature']
+```
+
 **Training arguments**  
 `--img 640` is the width of the images.  
 `--batch` - batch size   
