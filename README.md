@@ -36,6 +36,11 @@ In machine learning , the process of creating a model is usually divided into th
   * Preparing the model for further use
 
 ### [Data preparation](Step_1_Convertiong_Dataset_to_YOLOv5)
+
+To implement the module and to train the model, a sufficiently large set of training data (several thousand images) is needed. Due to the reluctance to independently search and mark up data (to highlight those areas in the image where the signatures are located, as well as where they are not), I decided to find a ready-made data set.
+
+Soon luck smiled on me and I came across [this](https://tc11.cvc.uab.es/datasets/Tobacco800_1) dataset. It was almost perfect for my task, I needed to carry out some actions and you can start learning.
+
 ### [Training the model](Step_2_Custom_YOLO_training)
 
 Use [this notebook](Step_2_Custom_YOLO_training/CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
