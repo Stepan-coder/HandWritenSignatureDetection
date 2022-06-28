@@ -114,4 +114,9 @@ for image in predicted:  # predicted - a list of lists, where the external list 
 cv2.imshow("Window", picture)
 cv2.waitKey()
 ```
+
+### Conclusion
+
+As a result of the development process of the signature detection module using the YOLOv5x deep machine learning model, it turned out to comply with all stages of the ML pipeline. The first stage was the search for data, as well as their transformation and preparation, then the YOLOv5x model was trained and tested, and at the end the model was prepared for use.
+
 This project is based on these two papers [[1]](https://repositum.tuwien.at/bitstream/20.500.12708/16962/1/Hauri%20Marcel%20Rene%20-%202021%20-%20Detecting%20Signatures%20in%20scanned%20document%20images.pdf) and [[2]](https://arxiv.org/abs/2004.12104).  
