@@ -45,6 +45,18 @@ Initially , the data in the presented dataset has the format `.tif` (I have some
 
 The next step in data preparation was the creation of a file by which YOLO will understand which image it is working with and where exactly the signature is (or not) on the image. To do this, it was necessary to process all the attached data `.xlm` files, to which this information is specified and create new files (for training and test samples). Along with this, converting the input images to the `640x480` pixels standard, the size of the input image to YOLOv5x **(for other models of the YOLO series, the size of the input image will be different)**. ***[When compressing /expanding images to a format, it is important not to forget to return them to their original size later, for this purpose, special columns must be provided in the files where this information should be recorded]***.
 
+In order for the original `yolov5/train.py ` was able to accept our custom data for training, they must be brought into a special format. In the `dataset` folder, you need to create the `images` and `labels' folders. In each of which to place directories with training and test images and labels, respectively.
+
+`dataset`  
+&nbsp;&nbsp;&nbsp;&nbsp; |-> `images`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-> `train` (.jpg files)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-> `valid` (.jpg files)  
+&nbsp;&nbsp;&nbsp;&nbsp; |-> `labels`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-> `train` (.txt files)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |-> `valid` (.txt files) 
+
+The data is prepared for submission to the model. The model is configured. You can start learning.
+
 ### [Training the model](Step_2_Custom_YOLO_training)
 
 Use [this notebook](Step_2_Custom_YOLO_training/CustomYOLOv5_using_Tobcco800_dataset.ipynb) to train and test the YOLOv5 model.
